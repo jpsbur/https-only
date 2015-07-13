@@ -2,6 +2,9 @@
   "manifest_version": 2,
   "name": "HTTPS only",
   "version": "0.1",
+  "icons": {
+    "128": "icon128.png"
+  },
 
   "description": "Block or redirect non-HTTPS requests",
 
@@ -15,5 +18,7 @@
   "background": {
     "scripts": ["main.js"],
     "persistent": true
-  }
+  },
+
+  "options_page": "options.html"
 }
