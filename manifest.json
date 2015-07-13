@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "HTTPS only",
+  "version": "0.1",
+
+  "description": "Block or redirect non-HTTPS requests",
+
+  "permissions": [
+    "activeTab",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+
+  "background": {
+    "scripts": ["main.js"],
+    "persistent": true
+  }
+}
