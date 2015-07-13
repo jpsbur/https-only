@@ -20,8 +20,8 @@ chrome.webRequest.onBeforeRequest.addListener(
     parser = document.createElement('a');
     parser.href = url;
     if (parser.protocol == 'http:') {
-      optionsRedirect = String(localStorage.getItem('optionsRedirect')).split('/, /');
-      optionsHttpAllowed = String(localStorage.getItem('optionsHttpAllowed')).split('/, /');
+      optionsRedirect = String(localStorage.getItem('optionsRedirect') || '').split(/[, ]/);
+      optionsHttpAllowed = String(localStorage.getItem('optionsHttpAllowed') || '').split(/[, ]/);
       if (optionsRedirect.indexOf(parser.hostname) != -1) {
         return {redirectUrl: 'https:' + url.substr(5)};
       } else if (optionsHttpAllowed.indexOf(parser.hostname) != -1) {
